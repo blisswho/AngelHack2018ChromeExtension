@@ -1,0 +1,46 @@
+{
+  "name": "Proxima",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "permissions": ["activeTab", "declarativeContent", "storage", "identity", "https://angelhack-firebase-project.firebaseio.com/*"],
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+      {
+      "matches": [
+          "http://*/*",
+          "https://*/*"
+          ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+      }],
+  "options_page": "popup.html",
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "48": "images/get_started48.png",
+      "128": "images/get_started128.png"
+    }
+  },
+  "icons": {
+    "16": "images/get_started16.png",
+    "32": "images/get_started32.png",
+    "48": "images/get_started48.png",
+    "128": "images/get_started128.png"
+  },
+  "manifest_version": 2,
+"content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+  "oauth2": {
+    "client_id": "891685495966-7skq9nrs84isevng37judrfhc100evcm.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr7rJMkbBTtcpUYxMkyGHhG0jzOQU2K5hXPIzwK1WHpIaxCS58W7ANa76VtWEzUJb/S3biEPzXRsXFL5rOOLFm/1TdcXT3wJibTwjaNwRD3yGHyqJE0o3BzQjEvis4AOki3hCkgaEGtCOiRh+97u0V0F2nTfeXyfgoxe6ZRRR8bNOmH7jZLwl036Vgm+c1QT+Gl7S8NBQUCbsvRUI3ra0hk9s/Y/4uAZwzqUFw+8W6RRkoU29GAbp1B4viD0rfUGObTD3ywILCA7MfpWMi2Oo1H1MUeeBdzsWk5EAnUNY5UcEcMfuYFdRv3tHp+Zbf5B+uQtkR0p5bZ3ZW2Tq3qj3QwIDAQAB"
+}
