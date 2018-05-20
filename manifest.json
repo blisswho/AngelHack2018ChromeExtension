@@ -1,7 +1,7 @@
 {
   "name": "Small Town",
   "version": "1.0",
-  "description": "Shorten your commute!",
+  "description": "Shorten your commute and apartment search!",
   "permissions": ["activeTab", "declarativeContent", "storage", "identity", "https://angelhack-firebase-project.firebaseio.com/*"],
   "options_page": "options.html",
   "background": {

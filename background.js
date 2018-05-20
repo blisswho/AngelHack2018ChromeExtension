@@ -32,7 +32,6 @@ chrome.runtime.onConnect.addListener( function(port) {
     xhr.onreadystatechange = function receiveResponse() {
      if (this.readyState == 4) {
          if (this.status == 200) {
-             alert("Saved! " + address);
          } else if (!isValid(this.response) && this.status == 0) {
              alert("The computer appears to be offline.");
          }
@@ -59,7 +58,7 @@ chrome.runtime.onConnect.addListener( function(port) {
 const uri = 'https://maps.googleapis.com/maps/api/geocode/json?';
 const apiKey = 'AIzaSyC0EThKVAaVkOIO47l21JFdmUeIEWEwBCA';
 
-var work_address = "126 College Ave, New Brunswick, NJ 08901"
+var work_address = "350 W Broadway, New York, NY 10013"
 
 var url = "https://maps.googleapis.com/maps/api/directions/json?origin="+address+"&destination="+work_address+"&key=AIzaSyC0EThKVAaVkOIO47l21JFdmUeIEWEwBCA";
 
@@ -85,7 +84,7 @@ xhr2.send();
 
 //BELOW IS GETTING SCHOOL ADDRESS
 
-var school_address = "604 Bartholomew Rd, Piscataway Township, NJ 08854"
+var school_address = "116th St & Broadway, New York, NY 10027"
 
 var url2 = "https://maps.googleapis.com/maps/api/directions/json?origin="+address+"&destination="+school_address+"&key=AIzaSyC0EThKVAaVkOIO47l21JFdmUeIEWEwBCA";
 
@@ -119,6 +118,8 @@ xhr3.send();
     xhr.send(myJSON);
 
   var something = msg.joke+"something something";
+
+  alert("Saved! " + address);
 
     port.postMessage({greeting: something});
   });
