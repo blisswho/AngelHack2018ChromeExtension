@@ -1,7 +1,7 @@
 {
-  "name": "Proxima",
+  "name": "Small Town",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "Shorten your commute!",
   "permissions": ["activeTab", "declarativeContent", "storage", "identity", "https://angelhack-firebase-project.firebaseio.com/*"],
   "options_page": "options.html",
   "background": {

@@ -2,7 +2,6 @@
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
   	var addressElement = document.getElementsByClassName('zsg-h5 bdp-sub-header')[0].innerText;
-    alert(addressElement);
     console.log("beginning: "+addressElement);
 
    var port = chrome.runtime.connect({name: "address"});
